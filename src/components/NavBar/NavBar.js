@@ -6,16 +6,22 @@ function NavBar() {
     return (
         <div>
         <li>
-          <Link to="/">Dogs</Link>
+          <Link to="/">Accueil</Link>
         </li>
         <li>
-          <Link to="/cats">Cats</Link>
+          <Link to="/dofus">Dofus</Link>
         </li>
         <li>
-          <Link to="/sheeps">Sheeps</Link>
+          <Link to="/sonjons">Donjons</Link>
         </li>
         <li>
-          <Link to="/goats">Goats</Link>
+          <Link to="/quetes">Quêtes</Link>
+        </li>
+        <li>
+          <Link to="/signup">S'inscrire</Link>
+        </li>
+        <li>
+          <Link to="/signin">Connexion</Link>
         </li>
       </div>
     );
