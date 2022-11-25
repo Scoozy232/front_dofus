@@ -3,14 +3,22 @@ import {BrowserRouter as Router, Routes, Route, BrowserRouter} from "react-route
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import CardItem from "./components/CardItem/CardItem";
+import ListMenu from "./components/ItemMenu/ListMenu";
+import Welcome from "./Welcome/Welcome";
 
 
 function App() {
     return (
         <BrowserRouter>
-            <NavBar></NavBar>
+            <NavBar/>
             <Routes>
-                <Route path="dofus" element={<CardItem/>}/>
+                <Route path="/" element={<Welcome/>}/>
+                <Route path="dofus" element={<ListMenu title={"Liste des dofus"}/>}/>
+                <Route path="donjons" element={<ListMenu title={"Liste des donjons"}/>}/>
+                <Route path="quetes" />
+                <Route path="signup"/>
+                <Route path="signin"/>
+                <Route path="*" element={<Welcome />} /> {/*futur 404*/}
             </Routes>
         </BrowserRouter>
     );

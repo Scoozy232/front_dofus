@@ -1,8 +1,12 @@
 import React from 'react';
+import CardItem from "../CardItem/CardItem";
 
-function ListMenu() {
+function ListMenu({title}) {
     return (
-       <div>ListMenu</div>
+        <div>
+            <h1>{title}</h1>
+            <CardItem></CardItem>
+        </div>
     );
 }
 
