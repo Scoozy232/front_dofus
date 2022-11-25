@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 
 function NavBar() {
@@ -13,7 +13,7 @@ function NavBar() {
                     <Link to="/dofus">Dofus</Link>
                 </li>
                 <li className='list-group-item m-2'>
-                    <Link to="/sonjons">Donjons</Link>
+                    <Link to="/donjons">Donjons</Link>
                 </li>
                 <li className='list-group-item m-2'>
                     <Link to="/quetes">Quêtes</Link>
@@ -27,7 +27,9 @@ function NavBar() {
                     <Link to="/signin">Connexion</Link>
                 </li>
             </div>
+            <Outlet /> 
         </div>
+        
     );
 }
 
