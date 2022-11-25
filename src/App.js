@@ -8,10 +8,9 @@ import CardItem from "./components/CardItem/CardItem";
 function App() {
     return (
         <BrowserRouter>
+            <NavBar></NavBar>
             <Routes>
-                <Route path="/" element={<NavBar/>}>
-                    <Route path="dofus" element={<CardItem/>}/>
-                </Route>
+                <Route path="dofus" element={<CardItem/>}/>
             </Routes>
         </BrowserRouter>
     );

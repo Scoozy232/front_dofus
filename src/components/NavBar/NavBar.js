@@ -13,7 +13,7 @@ function NavBar() {
                     <Link to="/dofus">Dofus</Link>
                 </li>
                 <li className='list-group-item m-2'>
-                    <Link to="/sonjons">Donjons</Link>
+                    <Link to="/donjons">Donjons</Link>
                 </li>
                 <li className='list-group-item m-2'>
                     <Link to="/quetes">Quêtes</Link>
