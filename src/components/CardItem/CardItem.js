@@ -4,7 +4,7 @@ import vita from '../../assets/vita.png'
 
 function CardItem() {
     return (
-        <div className={"card"} style={{width: 18 + "rem"}}>
+        <div className={"card m-3"} style={{width: 18 + "rem"}}>
             <img className={"card-img-right"} src={emeraude} alt="Card image cap"/>
             <div className="card-body">
                 <h5 className="card-title">Dofus Emeraude</h5>
@@ -15,9 +15,9 @@ function CardItem() {
                 <li className="list-group-item"><img src={vita} alt={"vitalité"}/>200 vitalité</li>
                 <li className="list-group-item">Vestibulum at eros</li>
             </ul>
-            <div className="card-body">
-                <button className={"btn btn-primary me-2"}>Comment obtenir</button>
-                <button className={"btn btn-success"}>Acquis !</button>
+            <div className="card-body justify-content-evenly row">
+                <button className={"btn btn-primary col-5"}>Comment obtenir ?</button>
+                <button className={"btn btn-success col-5"}>Acquis !</button>
             </div>
         </div>
     );
