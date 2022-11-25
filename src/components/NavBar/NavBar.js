@@ -4,26 +4,30 @@ import {  Link } from "react-router-dom";
 
 function NavBar() {
     return (
-        <div>
-        <li>
-          <Link to="/">Accueil</Link>
-        </li>
-        <li>
-          <Link to="/dofus">Dofus</Link>
-        </li>
-        <li>
-          <Link to="/sonjons">Donjons</Link>
-        </li>
-        <li>
-          <Link to="/quetes">Quêtes</Link>
-        </li>
-        <li>
-          <Link to="/signup">S'inscrire</Link>
-        </li>
-        <li>
-          <Link to="/signin">Connexion</Link>
-        </li>
-      </div>
+        <div className='d-flex justify-content-between'>
+            <div className='d-flex flex-row'>
+                <li className='list-group-item m-2'>
+                    <Link to="/">Accueil</Link>
+                </li>
+                <li className='list-group-item m-2'>
+                    <Link to="/dofus">Dofus</Link>
+                </li>
+                <li className='list-group-item m-2'>
+                    <Link to="/sonjons">Donjons</Link>
+                </li>
+                <li className='list-group-item m-2'>
+                    <Link to="/quetes">Quêtes</Link>
+                </li>
+            </div>
+            <div className='d-flex flex-row'>
+                <li className='list-group-item m-2'>
+                    <Link to="/signup">S'inscrire</Link>
+                </li>
+                <li className='list-group-item m-2'>
+                    <Link to="/signin">Connexion</Link>
+                </li>
+            </div>
+        </div>
     );
 }
 
