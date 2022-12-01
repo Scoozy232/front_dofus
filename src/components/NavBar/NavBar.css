@@ -1,11 +1,23 @@
 .back {
-    background-color: rgba(0, 0, 0, 0.33);  
+    background-color: rgba(0, 0, 0, 0.33);
 }
 
 .btn-dofus{
     background-image: url(../../assets/dofus/emeraude.png);
-  
+
 }
 img-dofus {
     width: 50%;
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-toggler-icon{
+    color: white;
 }
