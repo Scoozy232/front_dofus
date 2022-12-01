@@ -1,23 +1,21 @@
 import React from 'react';
-import emeraude from '../../assets/dofus/emeraude.png'
-import vita from '../../assets/vita.png'
+import {Link} from "react-router-dom";
 
-function CardItem() {
+function CardItem({image, title, underTitle, level, underLevel, buttonText1, buttonText2, href1, href2}) {
     return (
         <div className={"card m-3"} style={{width: 18 + "rem"}}>
-            <img className={"card-img-right"} src={emeraude} alt="Card image cap"/>
+            <img className={"card-img-right"} src={image} alt="Card image cap"/>
             <div className="card-body">
-                <h5 className="card-title">Dofus Emeraude</h5>
-                <p className="card-text">Donne 100% du bouclier à son porteur</p>
+                <h5 className="card-title">{title}</h5>
+                <p className="card-text">{underTitle}</p>
             </div>
             <ul className="list-group list-group-flush">
-                <li className="list-group-item">Niveau : 100</li>
-                <li className="list-group-item"><img src={vita} alt={"vitalité"}/>200 vitalité</li>
-                <li className="list-group-item">Vestibulum at eros</li>
+                <li className="list-group-item">{level}</li>
+                {underLevel}
             </ul>
             <div className="card-body justify-content-evenly row">
-                <button className={"btn btn-primary col-5"}>Comment obtenir ?</button>
-                <button className={"btn btn-success col-5"}>Acquis !</button>
+                <button className={"btn btn-primary col-5"}><Link className={'text-light text-decoration-none'} to={href1}>{buttonText1}</Link></button>
+                <button className={"btn btn-success col-5"}><Link className={'text-light text-decoration-none'} to={href2}>{buttonText2}</Link></button>
             </div>
         </div>
     );
