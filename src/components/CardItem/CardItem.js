@@ -1,15 +1,16 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import './CardItem.css'
 
 function CardItem({image, title, underTitle, level, underLevel, buttonText1, buttonText2, href1, href2}) {
     return (
-        <div className={"card m-3"} style={{width: 18 + "rem"}}>
-            <img className={"card-img-right"} src={image} alt="Card image cap"/>
+        <div className={"card m-3 backCard"} >
+            <img className={"card-img-right"} src={image} alt={'image'}/>
             <div className="card-body">
-                <h5 className="card-title">{title}</h5>
+                <h3 className="card-title">{title}</h3>
                 <p className="card-text">{underTitle}</p>
             </div>
-            <ul className="list-group list-group-flush">
+            <ul className="list-group list-group-flush" >
                 <li className="list-group-item">{level}</li>
                 {underLevel}
             </ul>
