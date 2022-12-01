@@ -1,4 +1,11 @@
 .back {
-    background-color: rgba(0, 0, 0, 0.33);   
-    /*opacity: 0.2;*/
+    background-color: rgba(0, 0, 0, 0.33);  
+}
+
+.btn-dofus{
+    background-image: url(../../assets/dofus/emeraude.png);
+  
+}
+img-dofus {
+    width: 50%;
 }

@@ -11,7 +11,6 @@ import Login from './components/Login/Login';
 
 function App() {
     return (
-        <div className={'container'}>
             <BrowserRouter>
                 <NavBar/>
                 <Routes>
@@ -24,7 +23,6 @@ function App() {
                     <Route path="*" element={<Welcome/>}/> {/*futur 404*/}
                 </Routes>
             </BrowserRouter>
-        </div>
     );
 }
 
