@@ -1,37 +1,43 @@
 import React from 'react';
-import { Outlet, Link } from "react-router-dom";
-import emeraude from '../../assets/dofus/emeraude.png'
+import {Outlet, Link} from "react-router-dom";
 import './NavBar.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 
 function NavBar() {
     return (
-        <div className={'back d-flex justify-content-between'}>
-            <div className={'d-flex flex-row'}>
-                <button className='btn btn-success m-2'>
-                    <Link className={'text-light text-decoration-none'} to="/">Accueil</Link>
-                </button>
-                <button className={'btn btn-default m-2'} height={'50%'}>
-                     <Link  className={'text-decoration-none'} to={"/dofus"}>Dofus</Link>{/*<img src={emeraude} height={'50%'}></img> */}
-                </button>
-                <button className={'list-group-item list-group-item-action m-2'}>
-                    <Link  className={'text-decoration-none'} to={"/donjons"}>Donjons</Link>
-                </button>
-                <button className={'list-group-item list-group-item-action m-2'}>
-                    <Link  className={'text-decoration-none'} to={"/quetes"}>Quêtes</Link>
-                </button>
-            </div>
-            <div className='d-flex flex-row'>
-                <button className='btn btn-success m-2'>
-                    <Link  className='text-light text-decoration-none' to="/signup">S'inscrire</Link>
-                </button>
-                <button className='btn btn-success m-2'>
-                    <Link  className='text-light text-decoration-none' to="/signin">Connexion</Link>
-                </button>
-            </div>
-            <Outlet /> 
-        </div>
-        
+        <Navbar className={'back navbar-dark'} expand="lg">
+            <Container>
+                <Navbar.Brand>
+                    <Link className={'text-decoration-none'} to={"/acceuil"}>Accueil</Link>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="/dofus">
+                            <Link className={'text-decoration-none'} to={"/dofus"}>Dofus</Link>
+                        </Nav.Link>
+                        <Nav.Link to="/donjon">
+                            <Link className={'text-decoration-none'} to={"/donjons"}>Donjons</Link>
+                        </Nav.Link>
+                        <Nav.Link href="#link">
+                            <Link className={'text-decoration-none'} to={"/quetes"}>Quêtes</Link>
+                        </Nav.Link>
+                    </Nav>
+
+                    {/*<div>*/}
+                            <Nav.Link className={'me-5'}>
+                                <Link className='text-light text-decoration-none' to="/signup">S'inscrire</Link>
+                            </Nav.Link>
+                            <Nav.Link>
+                                <Link className='text-light text-decoration-none' to="/signin">Connexion</Link>
+                            </Nav.Link>
+                        {/*</div>*/}
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 }
 
