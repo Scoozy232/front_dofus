@@ -4,6 +4,7 @@ import emeraude from '../../assets/dofus/emeraude.png'
 import turquoise from '../../assets/dofus/turquoise.png'
 import vita from '../../assets/carac/vita.png'
 import crit from '../../assets/carac/crit.png'
+import './ListMenu.css'
 
 function ListMenu({title}) {
     return (
