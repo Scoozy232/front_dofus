@@ -9,7 +9,7 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <div style={{backgroundColor: '#F5F5F5'}}>
+    <div className='bg'>
         <App/>
     </div>
 );
