@@ -4,7 +4,7 @@
 }
 
 #root{
-  background-image: url(./assets/dofus/dofus.jpg);
+  background-image: url(./assets/dofus.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
