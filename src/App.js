@@ -8,6 +8,7 @@ import LoginRegister from './components/LoginRegister/LoginRegister';
 import Login from './components/Login/Login';
 import Footer from "./components/Footer/Footer";
 import PageDetail from "./components/pageDetail/PageDetail";
+import Accueil from "./components/Accueil";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                 <Route path="quetes" element={<ListMenu title={"Liste des quêtes"}/>}/>
                 <Route path="signup" element={<LoginRegister/>}/>
                 <Route path="signin" element={<Login/>}/>
+                <Route path="accueil" element={<Accueil/>}/>
                 <Route path="*" element={<p> ERREUR 404 </p>}/> {/*futur 404*/}
             </Routes>
             <Footer/>
