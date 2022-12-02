@@ -5,8 +5,8 @@
 html, body {
   background-color: darkgrey;
 
-
-.area{
+}
+/*.area{
   background: #4e54c8;  
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
   width: 100%;
@@ -106,4 +106,4 @@ html, body {
       opacity: 0;
       border-radius: 50%;
   }
-}
+}*/
