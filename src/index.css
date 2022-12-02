@@ -1,12 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html, body {
   background-color: darkgrey;
+
 }
-.area{
-  background-color: darkgrey; 
+/*.area{
+  background: #4e54c8;  
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
   width: 100%;
   height:100vh;
-  position: absolute;
 }
 .circles{
   position: absolute;
@@ -15,7 +19,6 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 0;
 }
 .circles li{
   position: absolute;
@@ -25,7 +28,7 @@ html, body {
   height: 20px;
   background: rgba(255, 255, 255, 0.2);
   animation: animate 25s linear infinite;
-  bottom: -10px;
+  bottom: -150px;
 }
 .circles li:nth-child(1){
   left: 25%;
@@ -103,4 +106,4 @@ html, body {
       opacity: 0;
       border-radius: 50%;
   }
-}
+}*/
