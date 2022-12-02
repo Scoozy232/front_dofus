@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import emeraude from '../../assets/dofus/emeraude.png'
+import donjon from '../../assets/navBar/donjon.png'
+import quest from '../../assets/navBar/quest.png'
 
 
 function NavBar() {
@@ -24,12 +26,12 @@ function NavBar() {
                         </Nav.Link>
                         <Nav.Link to="/donjon">
                             <Link className={'text-decoration-none'} to={"/donjons"}>
-                                <img src={emeraude} alt={'image'}/>
+                                <img src={donjon} alt={'image'}/>
                             </Link>
                         </Nav.Link>
                         <Nav.Link href="#link">
                             <Link className={'text-decoration-none'} to={"/quetes"}>
-                                <img src={emeraude} alt={'image'}/>
+                                <img src={quest} alt={'image'}/>
                             </Link>
                         </Nav.Link>
                     </Nav>
