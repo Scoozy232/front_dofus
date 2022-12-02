@@ -17,7 +17,7 @@ function ListMenu({title}) {
                           </li>}
                           buttonText1={'Comment obtenir ?'}
                           buttonText2={'Acquis !'}
-                          href1={'/donjons'}
+                          href1={'/dofus/1'}
                           href2={'/dofus'}
                 />
                 <CardItem image={turquoise} title={'Dofus Turquoise'} underTitle={'Donne 1% de dommage finaux par crit'}
@@ -26,7 +26,7 @@ function ListMenu({title}) {
                           </li>}
                           buttonText1={'Comment obtenir ?'}
                           buttonText2={'Acquis !'}
-                          href1={'/donjons'}
+                          href1={'/dofus/2'}
                           href2={'/dofus'}
                 />
             </div>

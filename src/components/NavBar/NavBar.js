@@ -1,44 +1,48 @@
 import React from 'react';
-import {Outlet, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import './NavBar.css';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import emeraude from '../../assets/dofus/emeraude.png'
+import donjon from '../../assets/navBar/donjon.png'
+import quest from '../../assets/navBar/quest.png'
 
 
-function NavBar() {
+function divBar() {
     return (
-        <Navbar className={'back navbar-dark'} expand="lg">
-            <Container>
-                <Navbar.Brand>
-                    <Link className={'text-decoration-none'} to={"/acceuil"}>Accueil</Link>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto" >
-                        <Nav.Link href="/dofus">
-                            <Link className={'text-decoration-none'} to={"/dofus"}>Dofus</Link>
-                        </Nav.Link>
-                        <Nav.Link to="/donjon">
-                            <Link className={'text-decoration-none'} to={"/donjons"}>Donjons</Link>
-                        </Nav.Link>
-                        <Nav.Link href="#link">
-                            <Link className={'text-decoration-none'} to={"/quetes"}>Quêtes</Link>
-                        </Nav.Link>
-                    </Nav>
+        <div className={'back divbar-dark'} expand="lg">
+            <div>
+                <div>
+                    <Link className={'text-decoration-none'} to={"/accueil"}>Dofus pour les pros</Link>
+                </div>
+                <div aria-controls="basic-divbar-div"/>
+                <div id="basic-divbar-div">
+                    <div className="me-auto">
+                        <div href="/dofus">
+                            <Link className={'text-decoration-none'} to={"/dofus"}>
+                                <img src={emeraude} alt={'image'}/>
+                            </Link>
+                        </div>
+                        <div to="/donjon">
+                            <Link className={'text-decoration-none'} to={"/donjons"}>
+                                <img src={donjon} alt={'image'}/>
+                            </Link>
+                        </div>
+                        <div className={'me-auto'}>
+                            <Link className={'text-decoration-none'} to={"/quetes"}>
+                                <img src={quest} alt={'image'}/>
+                            </Link>
+                        </div>
 
-                    {/*<div>*/}
-                            <Nav.Link className={'me-5'}>
-                                <Link className='text-light text-decoration-none' to="/signup">S'inscrire</Link>
-                            </Nav.Link>
-                            <Nav.Link>
-                                <Link className='text-light text-decoration-none' to="/signin">Connexion</Link>
-                            </Nav.Link>
-                        {/*</div>*/}
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+                    <div>
+                        <Link className='text-light text-decoration-none' to="/signup">S'inscrire</Link>
+                    </div>
+                    <div>
+                        <Link className='text-light text-decoration-none' to="/signin">Connexion</Link>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 }
 
-export default NavBar;
+export default divBar;
