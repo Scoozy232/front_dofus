@@ -21,3 +21,11 @@ img-dofus {
 .navbar-toggler-icon{
     color: white;
 }
+
+.navbar-nav{
+    height: 60px;
+}
+
+img{
+    height: 100%;
+}
