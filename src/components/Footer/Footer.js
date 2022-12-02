@@ -10,47 +10,29 @@ function Footer() {
                         <h5 className="text-uppercase">Footer Content</h5>
                         <p>Here you can use rows and columns to organize your footer content.</p>
                     </div>
-                        <div className="col-md-3 mb-md-0 mb-3">
-                            <h5 className="text-uppercase">Links</h5>
-                            <ul className="list-unstyled">
-                                <li>
-                                    <a href="#!">Link 1</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Link 2</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Link 3</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Link 4</a>
-                                </li>
-                            </ul>
+                    <div className="col-md-3 mb-md-0 mb-3">
+                        <h5 className="text-uppercase">Links</h5>
+                        <ul className="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                        </ul>
 
-                        </div>
-                        <div className="col-md-3 mb-md-0 mb-3">
-                            <h5 className="text-uppercase">Links</h5>
+                    </div>
+                    <div className="col-md-3 mb-md-0 mb-3">
+                        <h5 className="text-uppercase">Links</h5>
 
-                            <ul className="list-unstyled">
-                                <li>
-                                    <a href="#!">Link 1</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Link 2</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Link 3</a>
-                                </li>
-                                <li>
-                                    <a href="#!">Link 4</a>
-                                </li>
-                            </ul>
+                        <ul className="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                        </ul>
 
-                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="footer-copyright text-center py-3">© 2020 Copyright:
-                <a href="/"> MDBootstrap.com</a>
+            <div className="footer-copyright text-center py-3">© 2022 Copyright:
+                <a href="/"> DofusPourLesPros.com</a>
             </div>
         </footer>
     );
