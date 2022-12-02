@@ -6,6 +6,7 @@ import ListMenu from "./components/ItemMenu/ListMenu";
 import Welcome from "./Welcome/Welcome";
 import LoginRegister from './components/LoginRegister/LoginRegister';
 import Login from './components/Login/Login';
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                 <Route path="signin" element={<Login/>}/>
                 <Route path="*" element={<Welcome/>}/> {/*futur 404*/}
             </Routes>
+            <Footer/>
         </BrowserRouter>
     );
 }
