@@ -6,9 +6,6 @@
     background-image: url(../../assets/dofus/emeraude.png);
 
 }
-img-dofus {
-    width: 50%;
-}
 
 .nav-link {
     color: white;
@@ -28,4 +25,8 @@ img-dofus {
 
 img{
     height: 100%;
+}
+
+a{
+    max-height: 60px;
 }

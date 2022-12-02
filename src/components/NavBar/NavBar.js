@@ -1,5 +1,5 @@
 import React from 'react';
-import {Outlet, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import './NavBar.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -29,21 +29,19 @@ function NavBar() {
                                 <img src={donjon} alt={'image'}/>
                             </Link>
                         </Nav.Link>
-                        <Nav.Link href="#link">
+                        <Nav.Link className={'me-auto'}>
                             <Link className={'text-decoration-none'} to={"/quetes"}>
                                 <img src={quest} alt={'image'}/>
                             </Link>
                         </Nav.Link>
-                    </Nav>
 
-                    {/*<div>*/}
-                            <Nav.Link className={'me-5'}>
-                                <Link className='text-light text-decoration-none' to="/signup">S'inscrire</Link>
-                            </Nav.Link>
-                            <Nav.Link>
-                                <Link className='text-light text-decoration-none' to="/signin">Connexion</Link>
-                            </Nav.Link>
-                        {/*</div>*/}
+                    <Nav.Link>
+                        <Link className='text-light text-decoration-none' to="/signup">S'inscrire</Link>
+                    </Nav.Link>
+                    <Nav.Link>
+                        <Link className='text-light text-decoration-none' to="/signin">Connexion</Link>
+                    </Nav.Link>
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
