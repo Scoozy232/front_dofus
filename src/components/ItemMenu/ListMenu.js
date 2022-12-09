@@ -13,18 +13,17 @@ function ListMenu({title}) {
             <div className="row">
                 <CardItem image={emeraude} title={'Dofus Emeraude'} underTitle={'Donne 100% du bouclier à son porteur'}
                           level={'Niveau : 100'}
-                          underLevel={<li className="list-group-item"><img src={vita} alt="vitalité"/> 200 vitalité
-                          </li>}
-                          buttonText1={'Comment obtenir ?'}
+                          underLevel={<li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/> <span className="font-normal text-gray-700 dark:text-gray-400">200 vitalité</span></li>}
+                          buttonText1={'Comment obtenir'}
                           buttonText2={'Acquis !'}
                           href1={'/dofus/1'}
                           href2={'/dofus'}
                 />
                 <CardItem image={turquoise} title={'Dofus Turquoise'} underTitle={'Donne 1% de dommage finaux par crit'}
                           level={'Niveau : 160'}
-                          underLevel={<li className="list-group-item"><img src={crit} alt="critique"/> 10% critique
+                          underLevel={<li className={"flex items-center mb-3 "}><img src={crit} alt="critique"/> <span className="font-normal text-gray-700 dark:text-gray-400">10% critique</span>
                           </li>}
-                          buttonText1={'Comment obtenir ?'}
+                          buttonText1={'Comment obtenir'}
                           buttonText2={'Acquis !'}
                           href1={'/dofus/2'}
                           href2={'/dofus'}
