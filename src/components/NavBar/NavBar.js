@@ -9,42 +9,6 @@ import quest from '../../assets/navBar/quest.png'
 
 function divBar() {
     return (
-        // <div className={'back divbar-dark'} expand="lg">
-        //     <div>
-        //         <div>
-        //             <Link className={'text-decoration-none'} to={"/accueil"}>Dofus pour les pros</Link>
-        //         </div>
-        //         <div aria-controls="basic-divbar-div"/>
-        //         <div id="basic-divbar-div">
-        //             <div className="me-auto">
-        //                 <div href="/dofus">
-        //                     <Link className={'text-decoration-none'} to={"/dofus"}>
-        //                         <img src={emeraude} alt={'image'}/>
-        //                     </Link>
-        //                 </div>
-        //                 <div to="/donjon">
-        //                     <Link className={'text-decoration-none'} to={"/donjons"}>
-        //                         <img src={donjon} alt={'image'}/>
-        //                     </Link>
-        //                 </div>
-        //                 <div className={'me-auto'}>
-        //                     <Link className={'text-decoration-none'} to={"/quetes"}>
-        //                         <img src={quest} alt={'image'}/>
-        //                     </Link>
-        //                 </div>
-        //
-        //             <div>
-        //                 <Link className='text-light text-decoration-none' to="/signup">S'inscrire</Link>
-        //             </div>
-        //             <div>
-        //                 <Link className='text-light text-decoration-none' to="/signin">Connexion</Link>
-        //             </div>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
-
-
         <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
             <div className="container flex flex-wrap items-center justify-between mx-auto">
                 <Link to={"/accueil"} className="flex items-center">
@@ -72,7 +36,7 @@ function divBar() {
                              xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd"
                                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                  clipRule="evenodd"></path>
+                                  clipRule="evenodd"/>
                         </svg>
                     </button>
                 </div>
