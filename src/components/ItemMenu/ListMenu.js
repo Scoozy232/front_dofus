@@ -38,7 +38,7 @@ function ListMenu({title}) {
                     dofus.map((item, i) => 
                     <CardItem image={emeraude} title={item.nom} underTitle={item.propriete}
                     level={item.niveau}
-                    underLevel={<li className="list-group-item"><img src={vita} alt="vitalité"/> {item.stat_native}
+                    underLevel={<li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/><span className="font-normal text-gray-700 dark:text-gray-400"> {item.stat_native}</span>
                     </li>}
                     buttonText1={'Comment obtenir ?'}
                     buttonText2={'Acquis !'}
