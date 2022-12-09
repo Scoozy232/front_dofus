@@ -8,9 +8,9 @@ import './ListMenu.css'
 
 function ListMenu({title}) {
     return (
-        <div className={'d-flex flex-column align-items-center'}>
-            <h1 className={'text-center'}>{title}</h1>
-            <div className="row">
+        <div>
+            <h1 className={'text-center mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-grey'}>{title}</h1>
+            <div className="grid grid-cols-4 gap-4">
                 <CardItem image={emeraude} title={'Dofus Emeraude'} underTitle={'Donne 100% du bouclier à son porteur'}
                           level={'Niveau : 100'}
                           underLevel={<li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/> <span className="font-normal text-gray-700 dark:text-gray-400">200 vitalité</span></li>}
@@ -28,6 +28,47 @@ function ListMenu({title}) {
                           href1={'/dofus/2'}
                           href2={'/dofus'}
                 />
+                <CardItem image={emeraude} title={'Dofus Emeraude'} underTitle={'Donne 100% du bouclier à son porteur'}
+                          level={'Niveau : 100'}
+                          underLevel={<li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/> <span className="font-normal text-gray-700 dark:text-gray-400">200 vitalité</span></li>}
+                          buttonText1={'Comment obtenir'}
+                          buttonText2={'Acquis !'}
+                          href1={'/dofus/1'}
+                          href2={'/dofus'}
+                />
+                <CardItem image={emeraude} title={'Dofus Emeraude'} underTitle={'Donne 100% du bouclier à son porteur'}
+                          level={'Niveau : 100'}
+                          underLevel={<li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/> <span className="font-normal text-gray-700 dark:text-gray-400">200 vitalité</span></li>}
+                          buttonText1={'Comment obtenir'}
+                          buttonText2={'Acquis !'}
+                          href1={'/dofus/1'}
+                          href2={'/dofus'}
+                />
+                <CardItem image={emeraude} title={'Dofus Emeraude'} underTitle={'Donne 100% du bouclier à son porteur'}
+                          level={'Niveau : 100'}
+                          underLevel={<li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/> <span className="font-normal text-gray-700 dark:text-gray-400">200 vitalité</span></li>}
+                          buttonText1={'Comment obtenir'}
+                          buttonText2={'Acquis !'}
+                          href1={'/dofus/1'}
+                          href2={'/dofus'}
+                />
+                <CardItem image={emeraude} title={'Dofus Emeraude'} underTitle={'Donne 100% du bouclier à son porteur'}
+                          level={'Niveau : 100'}
+                          underLevel={<li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/> <span className="font-normal text-gray-700 dark:text-gray-400">200 vitalité</span></li>}
+                          buttonText1={'Comment obtenir'}
+                          buttonText2={'Acquis !'}
+                          href1={'/dofus/1'}
+                          href2={'/dofus'}
+                />
+                <CardItem image={emeraude} title={'Dofus Emeraude'} underTitle={'Donne 100% du bouclier à son porteur'}
+                          level={'Niveau : 100'}
+                          underLevel={<li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/> <span className="font-normal text-gray-700 dark:text-gray-400">200 vitalité</span></li>}
+                          buttonText1={'Comment obtenir'}
+                          buttonText2={'Acquis !'}
+                          href1={'/dofus/1'}
+                          href2={'/dofus'}
+                />
+
             </div>
         </div>
     );
