@@ -10,13 +10,12 @@ import './ListMenu.css'
 
 
 
-function ListMenu({title}) {
+function ListMenu({title, url}) {
 
     const [dofus, setDofus] = React.useState("");
-    const baseURL = "http://localhost:3001/api/dofus";
-
+    console.log(url)
     React.useEffect(() => {
-        axios.get(baseURL,{
+        axios.get(url,{
             headers: {
                 "Access-Control-Allow-Origin" : "*",
                  "Content-type": "Application/json",
