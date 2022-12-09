@@ -24,7 +24,7 @@ function ListMenu({title}) {
                 email : "florian.aubin@laposte.net"
             }
         }).then((response) => {
-            const data = response;
+            //const data = response;
             setDofus(response.data);
             console.log(response.data)
         }).catch(err => console.log(err));
@@ -34,20 +34,20 @@ function ListMenu({title}) {
         <div className={'d-flex flex-column align-items-center'}>
             <h1 className={'text-center'}>{title}</h1>
             <div className="row">
-                {
-                    dofus.map((item, i) => 
-                    <CardItem image={emeraude} title={item.nom} underTitle={item.propriete}
-                    level={item.niveau}
-                    underLevel={<li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/><span className="font-normal text-gray-700 dark:text-gray-400"> {item.stat_native}</span>
-                    </li>}
-                    buttonText1={'Comment obtenir ?'}
-                    buttonText2={'Acquis !'}
-                    href1={'/dofus/1'}
-                    href2={'/dofus'}
-                 />
-                       
-                    )
-                }
+            {
+                Array.from(dofus).map((item, i) => 
+                <CardItem image={emeraude} title={item.nom} underTitle={item.propriete}
+                level={item.niveau}
+                underLevel={<li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/><span className="font-normal text-gray-700 dark:text-gray-400"> {item.stat_native}</span>
+                </li>}
+                buttonText1={'Comment obtenir ?'}
+                buttonText2={'Acquis !'}
+                href1={'/dofus/1'}
+                href2={'/dofus'}
+            />
+                
+                )
+            }
                  
             </div>
         </div>
