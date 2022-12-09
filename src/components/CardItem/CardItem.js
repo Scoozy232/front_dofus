@@ -23,8 +23,9 @@ function CardItem({image, title, underTitle, level, underLevel, buttonText1, but
 
         <div
             className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-
-            <img className="rounded-t-lg" src={image} alt=""/>
+            <div className={"flex flex-col items-center"}>
+                <img className="rounded-t-lg" src={image} alt=""/>
+            </div>
             <div className="p-5">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
                 <p className="mb-3 font-bold text-gray-700 dark:text-gray-400">{underTitle}</p>
