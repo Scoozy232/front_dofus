@@ -16,6 +16,7 @@ function App() {
     //const baseUrl = "https://dofus-app.herokuapp.com/api";
     return (
         <BrowserRouter>
+        <div className='flex flex-col content-between'>
             <NavBar/>
             <Routes>
                 <Route path="/" element={<Welcome/>}/>
@@ -23,12 +24,13 @@ function App() {
                 <Route path='dofus/:id' element={<PageDetail/>}/>
                 <Route path="donjons" element={<ListMenu title={"Liste des donjons"} url="http://localhost:3001/api/donjon"/>}/>
                 <Route path="quetes" element={<ListMenu title={"Liste des quêtes"} url="http://localhost:3001/api/quest"/>}/>
-                <Route path="signup" element={<LoginRegister/>}/>
+                <Route path="signup" element={<LoginRegister url="http://localhost:3001/api"/>}/>
                 <Route path="signin" element={<Login url="http://localhost:3001/api"/>}/>
                 <Route path="accueil" element={<Accueil/>}/>
                 <Route path="*" element={<p> ERREUR 404 </p>}/> {/*futur 404*/}
             </Routes>
             <Footer/>
+        </div>
         </BrowserRouter>
     );
 }

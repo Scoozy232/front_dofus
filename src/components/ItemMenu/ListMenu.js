@@ -17,8 +17,9 @@ function ListMenu({title, url}) {
     
     const navigate = useNavigate();
 
-    console.log(url)
+    
     React.useEffect(() => {
+        console.log(url)
         axios.get(url, {
             headers: {
                 "Access-Control-Allow-Origin" : "*",
