@@ -13,14 +13,17 @@ import './ListMenu.css'
 function ListMenu({title, url}) {
 
     const [dofus, setDofus] = React.useState("");
+    const json = localStorage.getItem("user");
+    const token = JSON.parse(json);
+
     console.log(url)
     React.useEffect(() => {
         axios.get(url,{
             headers: {
                 "Access-Control-Allow-Origin" : "*",
                  "Content-type": "Application/json",
-                Authorization :  JSON.parse(localStorage.getItem("user")).token,
-                email : "florian.aubin@laposte.net"
+                Authorization :  token.token,
+                email : token.user.email
             }
         }).then((response) => {
             //const data = response;
