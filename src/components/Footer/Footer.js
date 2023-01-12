@@ -3,30 +3,20 @@ import './Footer.css'
 
 function Footer() {
     return (
-        <footer className="border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <div className="container-fluid text-center text-md-left">
-                <div className="row">
-                    <div className="col-md-6 mt-md-0 mt-3">
-                        <h5 className="tracking-tight text-gray-900 dark:text-white">Footer super stylé</h5>
-                        <p className={'tracking-tight text-gray-900 dark:text-white mb-5'}>Site front + back fait par deux
-                            machines</p>
-                    </div>
-                    <div className="mb-md-0 mb-3">
-                        <h5 className="text-uppercase tracking-tight text-gray-900 dark:text-white">Participants : </h5>
-                        <ul className="list-unstyled">
-                            <li className={'tracking-tight text-gray-900 dark:text-white'}>
-                                AUBIN Florian (iop niveau 200)
-                            </li>
-                            <li className={'tracking-tight text-gray-900 dark:text-white'}>
-                                LOISEL EMMA (sacriette niveau 1)
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div className="text-center py-3 tracking-tight text-gray-900 dark:text-white">© 2022 Copyright:
-                <a href="/"> DofusPourLesPros.com</a>
-            </div>
+        <footer className="bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-900 dark:border-gray-600">
+            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="/" className="hover:underline">DofusPourLesPro</a>. All Rights Reserved.
+            </span>
+            <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+                <li>
+                    <a href="#" className="mr-4 hover:underline md:mr-6">Confidentialité</a>
+                </li>
+                <li>
+                    <a href="#" className="mr-4 hover:underline md:mr-6">Conditions d'utilisation</a>
+                </li>
+                <li>
+                    <a href="#" className="hover:underline">Contact</a>
+                </li>
+            </ul>
         </footer>
     );
 }

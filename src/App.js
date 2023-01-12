@@ -12,17 +12,19 @@ import Accueil from "./components/Accueil";
 
 
 function App() {
+
+    //const baseUrl = "https://dofus-app.herokuapp.com/api";
     return (
         <BrowserRouter>
             <NavBar/>
             <Routes>
                 <Route path="/" element={<Welcome/>}/>
-                <Route path="dofus" element={<ListMenu title={"Liste des dofus"}/>}/>
+                <Route path="dofus" element={<ListMenu title={"Liste des dofus"} url="http://localhost:3001/api/dofus"/>}/>
                 <Route path='dofus/:id' element={<PageDetail/>}/>
-                <Route path="donjons" element={<ListMenu title={"Liste des donjons"}/>}/>
-                <Route path="quetes" element={<ListMenu title={"Liste des quêtes"}/>}/>
+                <Route path="donjons" element={<ListMenu title={"Liste des donjons"} url="http://localhost:3001/api/donjon"/>}/>
+                <Route path="quetes" element={<ListMenu title={"Liste des quêtes"} url="http://localhost:3001/api/quest"/>}/>
                 <Route path="signup" element={<LoginRegister/>}/>
-                <Route path="signin" element={<Login/>}/>
+                <Route path="signin" element={<Login url="http://localhost:3001/api"/>}/>
                 <Route path="accueil" element={<Accueil/>}/>
                 <Route path="*" element={<p> ERREUR 404 </p>}/> {/*futur 404*/}
             </Routes>
