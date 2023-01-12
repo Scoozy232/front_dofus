@@ -4,25 +4,7 @@ import './CardItem.css'
 
 function CardItem({image, title, underTitle, level, underLevel, buttonText1, buttonText2, href1, href2}) {
     return (
-        // <div className={"card m-3 backCard"} >
-        //     <img className={"card-img-right"} src={image} alt={'image'}/>
-        //     <div className="card-body">
-        //         <h3 className="card-title">{title}</h3>
-        //         <p className="card-text">{underTitle}</p>
-        //     </div>
-        //     <ul className="list-group list-group-flush" >
-        //         <li className="list-group-item">{level}</li>
-        //         {underLevel}
-        //     </ul>
-        //     <div className="card-body justify-content-evenly row">
-        //         <button className={"btn btn-primary col-5"}><Link className={'text-light text-decoration-none'} to={href1}>{buttonText1}</Link></button>
-        //         <button className={"btn btn-success col-5"}><Link className={'text-light text-decoration-none'} to={href2}>{buttonText2}</Link></button>
-        //     </div>
-        // </div>
-
-
-        <div
-            className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
             <div className={"flex flex-col items-center"}>
                 <img className="rounded-t-lg" src={image} alt=""/>
             </div>
@@ -30,7 +12,7 @@ function CardItem({image, title, underTitle, level, underLevel, buttonText1, but
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
                 <p className="mb-3 font-bold text-gray-700 dark:text-gray-400">{underTitle}</p>
                 <ul>
-                    <li className="mb-3 font-normal text-gray-700 dark:text-gray-400">{level}</li>
+                    <li className="mb-3 font-normal text-gray-700 dark:text-gray-400">Niveau : {level}</li>
                     {underLevel}
                 </ul>
                 <div className={"grid grid-cols-2 gap-2"}>
