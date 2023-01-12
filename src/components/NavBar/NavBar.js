@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from "axios";
 import {Link} from "react-router-dom";
 import './NavBar.css';
 import emeraude from '../../assets/dofus/emeraude.png'
@@ -25,7 +26,57 @@ function dropdown() {
     }
 }
 
-function NavBar() {
+function disconnect(){
+    localStorage.removeItem("user")
+}
+
+function NavBar({url}) {
+
+    const [connect, setConnect] = useState("");
+    const json = localStorage.getItem("user");
+    const token = JSON.parse(json);
+console.log(url)
+    useEffect(() => {
+        axios.get(url, {
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Content-type": "Application/json",
+                Authorization: token.token,
+                email: token.user.email
+            }
+        }).then((response) => {
+            setConnect(response.data);
+        }).catch(err => console.log(err));
+    }, [url]);
+
+    function connected(){
+        if(connect.message != "CONNECTED"){
+            return <div>
+            <Link to="/signup">
+                <button type="button"
+                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Inscription
+                </button>
+            </Link>
+            <Link to="/signin">
+                <button type="button"
+                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Connexion
+                </button>
+            </Link>
+            </div>
+        }else{
+            return <div>
+            <Link onClick={disconnect} to="/signout">
+                <button type="button"
+                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Deconnexion
+                </button>
+            </Link>
+            </div>
+        }
+    }
+
     return (
         <nav className="mt-0 w-full border-gray-200 dark:bg-gray-900 p-3">
             <div className="container mx-auto flex items-center justify-between	px-4">
@@ -63,21 +114,10 @@ function NavBar() {
                         </li>
                     </ul>
                 </div>
-
+                
                 <div className="justify-end content-center hidden lg:inline">
                     <div className="flex md:order-2">
-                        <Link to="/signup">
-                            <button type="button"
-                                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Inscription
-                            </button>
-                        </Link>
-                        <Link to="/signin">
-                            <button type="button"
-                                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Connexion
-                            </button>
-                        </Link>
+                        {connected()}
                         <button data-collapse-toggle="navbar-cta" type="button"
                                 className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                                 aria-controls="navbar-cta" aria-expanded="false">

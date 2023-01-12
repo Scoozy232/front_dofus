@@ -44,6 +44,7 @@ function Login({url}) {
     return (
         <div className="relative flex flex-col justify-center 
     ">
+        
         <div className="w-full p-6 m-auto bg-gray-900 -mt-2  lg:max-w-xl">
             <h1 className="text-3xl font-semibold text-center text-white  uppercase ">
                Connexion
