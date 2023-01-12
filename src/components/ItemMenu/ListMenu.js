@@ -23,7 +23,7 @@ function ListMenu({title, url}) {
         }).then((response) => {
             if (dofus === "") {
                 setDofus(response.data);
-            } else if (dofus[0]._id != response.data[0]._id) {
+            } else if (dofus[0]._id !== response.data[0]._id) {
                 setDofus(response.data);
             }
         }).catch(err => console.log(err));
@@ -31,6 +31,17 @@ function ListMenu({title, url}) {
 
 
     getDatas();
+
+    function underlevel(statNative) {
+        console.log(statNative)
+        if (statNative != null) {
+            return <li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/><span
+                className="font-normal text-gray-700 dark:text-gray-400"> {statNative} </span>
+            </li>
+        } else {
+            return null;
+        }
+    }
 
     return (
         //a vérifier pour les classes ici TODO
@@ -41,9 +52,8 @@ function ListMenu({title, url}) {
                     Array.from(dofus).map((item, i) =>
                         <CardItem key={item._id} image={emeraude} title={item.nom} underTitle={item.propriete}
                                   level={item.niveau}
-                                  underLevel={<li className={"flex items-center mb-3 "}><img src={vita} alt="vitalité"/><span
-                                      className="font-normal text-gray-700 dark:text-gray-400"> {item.stat_native}</span>
-                                  </li>}
+
+                                  underLevel={underlevel(item.stat_native)}
                                   buttonText1={'Comment obtenir ?'}
                                   buttonText2={'Acquis !'}
                                   href1={'/dofus/1'}
