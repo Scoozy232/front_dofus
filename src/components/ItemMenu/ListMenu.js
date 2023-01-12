@@ -6,6 +6,7 @@ import turquoise from '../../assets/dofus/turquoise.png'
 import vita from '../../assets/carac/vita.png'
 import crit from '../../assets/carac/crit.png'
 import './ListMenu.css'
+import { useNavigate } from "react-router-dom";
 
 
 function ListMenu({title, url}) {
@@ -13,6 +14,8 @@ function ListMenu({title, url}) {
     const [dofus, setDofus] = React.useState("");
     const json = localStorage.getItem("user");
     const token = JSON.parse(json);
+    
+    const navigate = useNavigate();
 
     console.log(url)
     React.useEffect(() => {
@@ -27,7 +30,7 @@ function ListMenu({title, url}) {
             //const data = response;
             setDofus(response.data);
             console.log(response.data)
-        }).catch(err => console.log(err));
+        }).catch(err => navigate("/login"));
     }, []);
 
     return (
