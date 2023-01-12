@@ -52,7 +52,7 @@ function Login({url}) {
                     <label
                         className="block text-sm font-semibold text-lime-500"
                     >
-                        Nom d'utilisateur
+                        Votre adresse Email
                     </label>
                     <input
                         type="text"

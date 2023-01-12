@@ -11,14 +11,17 @@ import './ListMenu.css'
 function ListMenu({title, url}) {
 
     const [dofus, setDofus] = React.useState("");
+    const json = localStorage.getItem("user");
+    const token = JSON.parse(json);
+
     console.log(url)
     React.useEffect(() => {
         axios.get(url, {
             headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Content-type": "Application/json",
-                Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkxZjVjMTBkMDE4NTk1NjQ3NTk4NTMiLCJpYXQiOjE2NzM1MTk2NTcsImV4cCI6MTY3MzYwNjA1N30.oaDkp6-crjhuTPvHgVxV9qy2CJI-Ani8LLfAXelpRYQ",
-                email: "florian.aubin@laposte.net"
+                "Access-Control-Allow-Origin" : "*",
+                 "Content-type": "Application/json",
+                Authorization :  token.token,
+                email : token.user.email
             }
         }).then((response) => {
             //const data = response;
