@@ -19,7 +19,7 @@ function ListMenu({title, url}) {
             headers: {
                 "Access-Control-Allow-Origin" : "*",
                  "Content-type": "Application/json",
-                Authorization : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkxZjVjMTBkMDE4NTk1NjQ3NTk4NTMiLCJpYXQiOjE2NzA1MTAyNDEsImV4cCI6MTY3MDU5NjY0MX0.d5VH8ZHQtgTDW09W3RkHaG05eeS2ehksPbiIzRgwTMo",
+                Authorization :  JSON.parse(localStorage.getItem("user")).token,
                 email : "florian.aubin@laposte.net"
             }
         }).then((response) => {
