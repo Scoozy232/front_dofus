@@ -41,7 +41,7 @@ function ListMenu({title, url}) {
     }
 
     return (
-        <div className={'d-flex flex-column align-items-center'}>
+        <div className={'d-flex flex-column align-items-center min-h-full relative h-full pb-10'}>
             
         <NavBar url="http://localhost:3001/api/auth/isConnected"/>
             <h1 className={'text-center mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-grey'}>{title}</h1>

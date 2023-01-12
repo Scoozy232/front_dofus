@@ -16,7 +16,7 @@ function App() {
     //const baseUrl = "https://dofus-app.herokuapp.com/api";
     return (
         <BrowserRouter>
-        <div className=''>  
+        <div className='h-full'>  
             <Routes>
                 <Route path="/" element={<Welcome/>}/>
                 <Route path="dofus" element={<ListMenu title={"Liste des dofus"} url="http://localhost:3001/api/dofus"/>}/>
