@@ -2,13 +2,15 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import CardItem from "../CardItem/CardItem";
 import emeraude from '../../assets/dofus/emeraude.png'
+import donjon from '../../assets/navBar/donjon.png'
+import quest from '../../assets/navBar/quest.png'
 import vita from '../../assets/carac/vita.png'
 import './ListMenu.css'
 import { useNavigate } from "react-router-dom";
 import NavBar from '../NavBar/NavBar';
 
 
-function ListMenu({title, url}) {
+function ListMenu({title, url, img}) {
 
 
     const [dofus, setDofus] = useState("");
@@ -40,27 +42,68 @@ function ListMenu({title, url}) {
         }
     }
 
+    function immage(){
+        if(img == "dofus"){
+            return <div className="grid md:grid-cols-2 md:gap-2 lg:gap-4 lg:grid-cols-4 grid-cols-1 gap-1">
+            {
+                Array.from(dofus).map((item, i) =>
+                    <CardItem key={item._id} image={emeraude} title={item.nom} underTitle={item.propriete}
+                              level={item.niveau}
+
+                              underLevel={underlevel(item.stat_native)}
+                              buttonText1={'L\'obtenir ?'}
+                              buttonText2={'Acquis !'}
+                              href1={"/dofus/"+item.id}
+                              href2={'/dofus'}
+                    />
+                )
+            }
+            
+
+        </div>
+        }else if(img == "quest"){
+            return <div className="grid md:grid-cols-2 md:gap-2 lg:gap-4 lg:grid-cols-4 grid-cols-1 gap-1">
+            {
+                Array.from(dofus).map((item, i) =>
+                    <CardItem key={item._id} image={quest} title={item.nom} underTitle={item.propriete}
+                              level={item.niveau}
+
+                              underLevel={underlevel(item.stat_native)}
+                              buttonText1={'L\'obtenir ?'}
+                              buttonText2={'Réalisé !'}
+                              href1={"/quest/"+item.id}
+                              href2={'/quest'}
+                    />
+                )
+            }
+
+        </div>
+        }else{
+            return <div className="grid md:grid-cols-2 md:gap-2 lg:gap-4 lg:grid-cols-4 grid-cols-1 gap-1">
+            {
+                Array.from(dofus).map((item, i) =>
+                    <CardItem key={item._id} image={donjon} title={item.nom} underTitle={item.propriete}
+                              level={item.niveau}
+
+                              underLevel={underlevel(item.stat_native)}
+                              buttonText1={'L\'obtenir ?'}
+                              buttonText2={'Réalisé !'}
+                              href1={"/donjon/"+item.id}
+                              href2={'/donjon'}
+                    />
+                )
+            }
+
+        </div>
+        }
+    }
+
     return (
         <div className={'d-flex flex-column align-items-center min-h-full relative h-full pb-10'}>
             
         <NavBar url="http://localhost:3001/api/auth/isConnected"/>
             <h1 className={'text-center mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-grey'}>{title}</h1>
-            <div className="grid md:grid-cols-2 md:gap-2 lg:gap-4 lg:grid-cols-4 grid-cols-1 gap-1">
-                {
-                    Array.from(dofus).map((item, i) =>
-                        <CardItem key={item._id} image={emeraude} title={item.nom} underTitle={item.propriete}
-                                  level={item.niveau}
-
-                                  underLevel={underlevel(item.stat_native)}
-                                  buttonText1={'Comment obtenir ?'}
-                                  buttonText2={'Acquis !'}
-                                  href1={item.id}
-                                  href2={'/dofus'}
-                        />
-                    )
-                }
-
-            </div>
+            {immage()}
         </div>
     );
 }

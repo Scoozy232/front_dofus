@@ -6,7 +6,7 @@ function CardItem({image, title, underTitle, level, underLevel, buttonText1, but
     return (
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
             <div className={"flex flex-col items-center"}>
-                <img className="rounded-t-lg" src={image} alt=""/>
+                <img className="rounded-t-lg h-28" src={image} alt=""/>
             </div>
             <div className="p-5">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
@@ -16,7 +16,7 @@ function CardItem({image, title, underTitle, level, underLevel, buttonText1, but
                     {underLevel}
                 </ul>
                 <div className={"grid grid-cols-2 gap-2"}>
-                    <Link to={"/dofus/"+href1}
+                    <Link to={href1}
                           className="md:mr-3 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         {buttonText1}
                         <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"

@@ -19,10 +19,12 @@ function App() {
         <div className='h-full'>  
             <Routes>
                 <Route path="/" element={<Welcome/>}/>
-                <Route path="dofus" element={<ListMenu title={"Liste des dofus"} url="http://localhost:3001/api/dofus"/>}/>
+                <Route path="dofus" element={<ListMenu title={"Liste des dofus"} url="http://localhost:3001/api/dofus" img="dofus"/>}/>
                 <Route path='dofus/:id' element={<PageDetail/>}/>
-                <Route path="donjons" element={<ListMenu title={"Liste des donjons"} url="http://localhost:3001/api/donjon"/>}/>
-                <Route path="quetes" element={<ListMenu title={"Liste des quêtes"} url="http://localhost:3001/api/quest"/>}/>
+                <Route path="donjons" element={<ListMenu title={"Liste des donjons"} url="http://localhost:3001/api/donjon" img="donjon"/>}/>
+                <Route path='donjon/:id' element={<PageDetail/>}/>
+                <Route path="quetes" element={<ListMenu title={"Liste des quêtes"} url="http://localhost:3001/api/quest" img="quest"/>}/>
+                <Route path='quest/:id' element={<PageDetail/>}/>
                 <Route path="signup" element={<LoginRegister url="http://localhost:3001/api"/>}/>
                 <Route path="signin" element={<Login url="http://localhost:3001/api"/>}/>
                 <Route path="accueil" element={<Accueil/>}/>
