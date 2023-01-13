@@ -18,7 +18,7 @@ function App() {
         <BrowserRouter>
         <div className='h-full'>
             <Routes>
-                <Route path="/front_dofus" element={<Welcome/>}/>
+                <Route path="front_dofus/" element={<Welcome/>}/>
                 <Route path="front_dofus/dofus" element={<ListMenu title={"Liste des dofus"} url={baseUrl+"api/dofus"} img="dofus"/>}/>
                 <Route path='front_dofus/dofus/:id' element={<PageDetail/>}/>
                 <Route path="front_dofus/donjons" element={<ListMenu title={"Liste des donjons"} url={baseUrl+"api/donjon"} img="donjon"/>}/>
