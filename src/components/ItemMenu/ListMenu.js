@@ -29,7 +29,7 @@ function ListMenu({title, url, img}) {
         }).then((response) => {
             setDofus(response.data);
             console.log(response.data)
-        }).catch(err => navigate("/welcolme"));
+        }).catch(err => navigate("/front_dofus/welcolme"));
     }, [url]);
 
     function underlevel(statNative) {
@@ -58,7 +58,7 @@ function ListMenu({title, url, img}) {
                     />
                 )
             }
-            
+
 
         </div>
         }else if(img == "quest"){
@@ -100,7 +100,7 @@ function ListMenu({title, url, img}) {
 
     return (
         <div className={'d-flex flex-column align-items-center min-h-full relative h-full pb-10'}>
-            
+
         <NavBar url="https://dofus-api-ynvz.onrender.com/api/auth/isConnected"/>
             <h1 className={'text-center mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-grey'}>{title}</h1>
             {immage()}
