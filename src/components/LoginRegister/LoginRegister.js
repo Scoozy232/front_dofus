@@ -42,12 +42,14 @@ function LoginRegister({url}) {
                 navigate("/front_dofus/signin");
             })
             .catch(error => {
+                document.getElementById("error").classList.remove('hidden');
                 setMessage("Auth failure! Please create an account");
             })
     };
     return (
         <div className="relative flex flex-col justify-center content-center pt-20 pb-20">
-            <div className="w-full p-6 m-auto bg-gray-900 -mt-2  lg:max-w-xl">
+            <div id={"error"} className="w-full p-6 m-auto bg-red-900 -mt-2  lg:max-w-xl text-center text-white hidden mb-5 rounded">Erreur lors de la creation du compte, reesaye zebi</div>
+            <div className="w-full p-6 m-auto bg-gray-900 -mt-2  lg:max-w-xl rounded">
                 <h1 className="text-3xl font-semibold text-center text-white  uppercase ">
                     Inscription
                 </h1>
