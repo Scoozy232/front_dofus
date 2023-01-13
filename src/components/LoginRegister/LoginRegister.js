@@ -30,23 +30,23 @@ function LoginRegister({url}) {
           "password": password,
           "name" : name
         }
-        
+
         const api = axios.create({
           baseURL: url
         })
     console.log(loginData)
         api.post("/auth/signup", loginData)
-        
-            .then(res => {      
-                console.log(res)       
-                navigate("/Login");
+
+            .then(res => {
+                console.log(res)
+                navigate("/front_dofus/signin");
           })
             .catch(error=>{
                 setMessage("Auth failure! Please create an account");
             })
       };
     return (
-        <div className="relative flex flex-col justify-center 
+        <div className="relative flex flex-col justify-center
     ">
         <div className="w-full p-6 m-auto bg-gray-900 -mt-2  lg:max-w-xl">
             <h1 className="text-3xl font-semibold text-center text-white  uppercase ">
@@ -63,7 +63,7 @@ function LoginRegister({url}) {
                         type="text"
                         name="login"
                         className="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border rounded-md focus:border-purple-400 focus:ring-bleu200 focus:outline-none focus:ring focus:ring-opacity-40"
-                        value={login} 
+                        value={login}
                         onChange={onChangeUsername}
                     />
                 </div>
@@ -77,7 +77,7 @@ function LoginRegister({url}) {
                         type="text"
                         name="name"
                         className="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border rounded-md focus:border-purple-400 focus:ring-bleu200 focus:outline-none focus:ring focus:ring-opacity-40"
-                        value={name} 
+                        value={name}
                         onChange={onChangeName}
                     />
                 </div>
@@ -95,7 +95,7 @@ function LoginRegister({url}) {
                         onChange={onChangePassword}
                     />
                 </div>
-                
+
                 <div className="mt-6">
                     <button type="button" className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:bg-bleu" onClick={handleLogin}>
                         Inscription
