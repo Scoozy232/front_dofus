@@ -3,8 +3,6 @@ import {Link} from "react-router-dom";
 
 function Welcome() {
 
-
-
     return (
         <div className='min-h-full relative h-full pb-10 text-white'>
             <h1 className={'text-center text-3xl font-bold underline '}>Bienvenue sur Dofus pour les pro !</h1>

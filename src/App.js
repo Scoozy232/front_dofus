@@ -13,7 +13,7 @@ import Accueil from "./components/Accueil";
 
 function App() {
 
-    const baseUrl = "https://dofus-api-ynvz.onrender.com";
+    const baseUrl = "https://dofus-api-ynvz.onrender.com/";
     return (
         <BrowserRouter>
         <div className='h-full'>
