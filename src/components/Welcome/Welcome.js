@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 function Welcome() {
 
-    
+
 
     return (
         <div className='min-h-full relative h-full pb-10 text-white'>
@@ -17,7 +17,7 @@ function Welcome() {
                     <li>Ainsi que les donjons que tu as réalisé.</li>
                 </ul></div>
                 <div className='my-5'><p>N'hésite plus si tu es un grand fan Dofus comme nous je sais que tu as déjà ton compte ! </p>
-                <Link to="/signin">
+                <Link to="signin">
                     <button type="button"
                             className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:bg-bleu">
                         Connexion
@@ -25,14 +25,14 @@ function Welcome() {
                 </Link></div>
                 <div><p>Et sinon t'en fais pas. Inscrit toi dès maintenant! C'est gratuit.</p>
 
-                <Link to="/signup">
+                <Link to="signup">
                     <button type="button"
                             className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-00 transform bg-blue-700 rounded-md hover:bg-blue-800 focus:outline-none focus:bg-bleu">
                         Inscription
                     </button>
                 </Link></div></div>
             </div>
-            
+
 
 
         </div>
