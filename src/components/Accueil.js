@@ -3,7 +3,7 @@ import NavBar from './NavBar/NavBar';
 const Accueil = () =>{
     return (
       <div>
-        <NavBar url="http://localhost:3001/api/auth/isConnected"/>
+        <NavBar url="https://dofus-api-ynvz.onrender.com/api/auth/isConnected"/>
           <h1 className="text-3xl font-bold underline">
               Hello world!
           </h1>

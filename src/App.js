@@ -13,20 +13,20 @@ import Accueil from "./components/Accueil";
 
 function App() {
 
-    //const baseUrl = "https://dofus-app.herokuapp.com/api";
+    const baseUrl = "https://dofus-api-ynvz.onrender.com";
     return (
         <BrowserRouter>
         <div className='h-full'>  
             <Routes>
                 <Route path="/" element={<Welcome/>}/>
-                <Route path="dofus" element={<ListMenu title={"Liste des dofus"} url="http://localhost:3001/api/dofus" img="dofus"/>}/>
+                <Route path="dofus" element={<ListMenu title={"Liste des dofus"} url={baseUrl+"api/dofus"} img="dofus"/>}/>
                 <Route path='dofus/:id' element={<PageDetail/>}/>
-                <Route path="donjons" element={<ListMenu title={"Liste des donjons"} url="http://localhost:3001/api/donjon" img="donjon"/>}/>
+                <Route path="donjons" element={<ListMenu title={"Liste des donjons"} url={baseUrl+"api/donjon"} img="donjon"/>}/>
                 <Route path='donjon/:id' element={<PageDetail/>}/>
-                <Route path="quetes" element={<ListMenu title={"Liste des quêtes"} url="http://localhost:3001/api/quest" img="quest"/>}/>
+                <Route path="quetes" element={<ListMenu title={"Liste des quêtes"} url={baseUrl+"api/quest"} img="quest"/>}/>
                 <Route path='quest/:id' element={<PageDetail/>}/>
-                <Route path="signup" element={<LoginRegister url="http://localhost:3001/api"/>}/>
-                <Route path="signin" element={<Login url="http://localhost:3001/api"/>}/>
+                <Route path="signup" element={<LoginRegister url={baseUrl+"api"}/>}/>
+                <Route path="signin" element={<Login url={baseUrl+"api"}/>}/>
                 <Route path="accueil" element={<Accueil/>}/>
                 <Route path="signout" element={<Welcome/>}/>
                 <Route path="*" element={<p> ERREUR 404 </p>}/> {/*futur 404*/}
