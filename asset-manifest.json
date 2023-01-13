@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/front_dofus/static/css/main.d555ccf3.css",
-    "main.js": "/front_dofus/static/js/main.45b2b99d.js",
+    "main.css": "/front_dofus/static/css/main.70a3661f.css",
+    "main.js": "/front_dofus/static/js/main.1a3a3f76.js",
     "static/js/787.ffc3f8ea.chunk.js": "/front_dofus/static/js/787.ffc3f8ea.chunk.js",
     "service-worker.js": "/front_dofus/service-worker.js",
     "static/media/quest.png": "/front_dofus/static/media/quest.04fe3840f4cbbb832f24.png",
@@ -9,12 +9,12 @@
     "static/media/donjon.png": "/front_dofus/static/media/donjon.9ef94f50f0b9cbadcadc.png",
     "static/media/emeraude.png": "/front_dofus/static/media/emeraude.75dba5d4622bd9f84ae3.png",
     "index.html": "/front_dofus/index.html",
-    "main.d555ccf3.css.map": "/front_dofus/static/css/main.d555ccf3.css.map",
-    "main.45b2b99d.js.map": "/front_dofus/static/js/main.45b2b99d.js.map",
+    "main.70a3661f.css.map": "/front_dofus/static/css/main.70a3661f.css.map",
+    "main.1a3a3f76.js.map": "/front_dofus/static/js/main.1a3a3f76.js.map",
     "787.ffc3f8ea.chunk.js.map": "/front_dofus/static/js/787.ffc3f8ea.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d555ccf3.css",
-    "static/js/main.45b2b99d.js"
+    "static/css/main.70a3661f.css",
+    "static/js/main.1a3a3f76.js"
   ]
 }
