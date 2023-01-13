@@ -16,7 +16,7 @@ function CardItem({image, title, underTitle, level, underLevel, buttonText1, but
                     {underLevel}
                 </ul>
                 <div className={"grid grid-cols-2 gap-2"}>
-                    <Link to={href1}
+                    <Link to={"/front_dofus" + href1}
                           className="md:mr-3 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         {buttonText1}
                         <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
@@ -26,7 +26,7 @@ function CardItem({image, title, underTitle, level, underLevel, buttonText1, but
                                   clipRule="evenodd"/>
                         </svg>
                     </Link>
-                    <Link to={href2}
+                    <Link to={"/front_dofus" + href2}
                           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                         {buttonText2}
                         <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
